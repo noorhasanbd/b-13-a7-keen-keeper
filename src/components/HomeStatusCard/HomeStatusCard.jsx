@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeStatusCard = () => {
   return (
-    <div className="container mx-auto mt-16">
+    <div className="container mx-auto mt-16 grid justify-center">
       <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-8">
         <div className="card bg-base-100 w-64 shadow-sm">
           <div className="card-body text-center">
