@@ -1,9 +1,12 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, use, useState } from "react";
+const friendsPromise = fetch("/friends.json").then((res) => res.json());
 
 export const FriendsContext = createContext();
 
 
 const FriendsProvider = ({children}) => {
+
+  const friends= use(friendsPromise);
 
   const [actionLog, setActionLog]=useState([])
 
@@ -21,7 +24,7 @@ const FriendsProvider = ({children}) => {
   
 
   const data = {
-    hi : "Hello",
+    friends,
     handleAction,
     actionLog
 

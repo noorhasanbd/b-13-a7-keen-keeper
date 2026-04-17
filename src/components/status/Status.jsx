@@ -1,6 +1,6 @@
 import React from "react";
 
-const Status = ({status}) => {
+const Status = ({ status }) => {
   const getStatusColor = (status) => {
     let color;
 

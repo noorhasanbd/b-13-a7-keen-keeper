@@ -1,9 +1,11 @@
-import React, { Suspense, use } from "react";
+import React, { Suspense, use, useContext } from "react";
 import FriendCard from "../FriendsCard/FriendCard";
-const friendsPromise = fetch("/friends.json").then((res) => res.json());
+import { FriendsContext } from "../../context/FriendsContext";
+//const friendsPromise = fetch("/friends.json").then((res) => res.json());
 
 const AllFriends = () => {
-  const friends = use(friendsPromise);
+  // const friends = use(friendsPromise);
+  const { friends } = useContext(FriendsContext);
 
   return (
     <Suspense

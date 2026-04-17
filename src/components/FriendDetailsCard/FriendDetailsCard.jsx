@@ -36,7 +36,7 @@ const FriendDetailsCard = () => {
 
   // console.log(selectedFriend, "Printing from Detail");
   return (
-    <div className="container mx-auto px-4 my-8 md:my-16">
+    <div className="container mx-auto px-4 my-8 md:my-16 min-h-screen">
      
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         

@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router";
 import TagsBadge from "../tags/TagsBadge";
 import Status from "../status/Status";
+import { FriendsContext } from "../../context/FriendsContext";
 
 const FriendCard = ({ friend }) => {
+
+  
   const {
     name,
     id,
