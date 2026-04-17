@@ -12,8 +12,8 @@ const AllFriends = () => {
       fallback={<span className="loading loading-ring loading-xl"></span>}
     >
       <div>
-        <div className="container mx-auto grid justify-center my-16">
-          <h2 className="text-3xl font-bold my-6">All Friends</h2>
+        <div className="container   mx-auto grid justify-center my-8">
+          <h2 className="text-3xl font-bold my-6 border-t  border-gray-400/50 pt-4">All Friends</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-8">
             {friends.map((friend) => (
               <FriendCard key={friend.id} friend={friend} />

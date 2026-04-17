@@ -30,6 +30,7 @@ const FriendDetailsCard = () => {
     days_since_contact: daysSinceContact,
     goal,
     next_due_date: nextDueDate,
+   email
   } = selectedFriend;
 
   const { handleAction } = useContext(FriendsContext);
@@ -43,7 +44,7 @@ const FriendDetailsCard = () => {
         <div className="card bg-base-100 shadow-sm md:row-span-2 h-full">
           <div className="card-body text-center flex flex-col items-center">
             <img
-              src={`/public/profile/${selectedFriend.id}.jpg`}
+              src={picture}
               alt={name}
               className="rounded-full w-32 h-32 object-cover mb-2"
             />
@@ -51,6 +52,9 @@ const FriendDetailsCard = () => {
             <div className="flex flex-col justify-center items-center space-y-2 mt-2">
               <TagsBadge tags={tags} />
               <Status status={status} />
+
+              <span>"{bio}"</span>
+              <span>{email}</span>
             </div>
           </div>
         </div>
@@ -62,7 +66,7 @@ const FriendDetailsCard = () => {
           { label: "Next Due", value: formatter.format(new Date(nextDueDate)) },
         ].map((stat, i) => (
           <div key={i} className="card bg-base-100 shadow-sm">
-            <div className="card-body text-center py-6">
+            <div className="card-body text-center">
               <h2 className="text-2xl font-semibold text-[#244D3F]">
                 {stat.value}
               </h2>
@@ -89,7 +93,7 @@ const FriendDetailsCard = () => {
         </div>
 
         
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 justify-center">
           <button className="btn bg-base-100 justify-start">
             <RiNotificationSnoozeLine /> Snooze 2 weeks
           </button>

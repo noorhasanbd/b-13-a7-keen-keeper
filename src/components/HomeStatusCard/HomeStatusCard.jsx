@@ -26,7 +26,7 @@ const HomeStatusCard = () => {
   ];
 
   return (
-    <div className="container mx-auto mt-16 px-4">
+    <div className="container  mx-auto grid justify-center my-8">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
         {stats.map((stat, index) => (
           <div

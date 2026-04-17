@@ -15,6 +15,7 @@ const FriendCard = ({ friend }) => {
     next_due_date: nextDueDate,
     days_since_contact: daysSinceContact,
     tags,
+    picture
   } = friend;
   const getStatusColor = (status) => {
     let color;
@@ -38,7 +39,7 @@ const FriendCard = ({ friend }) => {
         <div className="card-body text-center">
           <div className="flex flex-col justify-center items-center">
             <img
-              src={`/public/profile/${id}.jpg`}
+              src={picture}
               alt=""
               className="rounded-full w-32 h-32 object-cover"
             />
