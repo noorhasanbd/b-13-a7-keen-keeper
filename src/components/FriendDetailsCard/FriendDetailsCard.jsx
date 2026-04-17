@@ -60,8 +60,8 @@ const FriendDetailsCard = () => {
           { label: "Days Since Contact", value: daysSinceContact },
           { label: "Goal (Days)", value: goal },
           { label: "Next Due", value: formatter.format(new Date(nextDueDate)) },
-        ].map((stat, idx) => (
-          <div key={idx} className="card bg-base-100 shadow-sm">
+        ].map((stat, i) => (
+          <div key={i} className="card bg-base-100 shadow-sm">
             <div className="card-body text-center py-6">
               <h2 className="text-2xl font-semibold text-[#244D3F]">
                 {stat.value}
