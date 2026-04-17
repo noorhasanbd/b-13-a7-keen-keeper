@@ -7,7 +7,7 @@ import { Link } from "react-router";
 
 const Footer = () => {
   return (
-    <div className="bg-[#244D3F] min-h-screen">
+    <div className="bg-[#244D3F]">
       <div className="container mx-auto p-8">
         <div className="flex flex-col items-center justify-center space-y-4 mb-6">
           <img src={footerLogo} alt="" />

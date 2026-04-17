@@ -11,7 +11,7 @@ const HomePage = () => {
             <HomeTitle/>
             <HomeStatusCard/>
             <AllFriends/>
-            <FriendDetailsCard/>
+            
         </div>
     );
 };

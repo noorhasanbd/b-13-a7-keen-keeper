@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
+import TagsBadge from "../tags/TagsBadge";
+import Status from "../status/Status";
 
 const FriendCard = ({ friend }) => {
   const {
@@ -11,8 +13,24 @@ const FriendCard = ({ friend }) => {
     days_since_contact: daysSinceContact,
     tags,
   } = friend;
+  const getStatusColor = (status) => {
+    let color;
+
+    if (status === "overdue") {
+      color = "bg-[#EF4444]";
+    } else if (status === "almost due") {
+      color = "bg-[#EFAD44]";
+    } else if (status === "on-track") {
+      color = "bg-[#244D3F]";
+    } else {
+      color = "bg-[#999999]"; // Default gray
+    }
+
+    return color;
+  };
+
   return (
-    <Link >
+    <Link to={`/friendsdetail/${id}`}>
       <div className="card bg-base-100 w-64 shadow-sm">
         <div className="card-body text-center">
           <div className="flex flex-col justify-center items-center">
@@ -30,8 +48,8 @@ const FriendCard = ({ friend }) => {
               {daysSinceContact}d ago
             </p>
             <div className="flex flex-col justify-center items-center space-y-2">
-              <div class="badge badge-soft badge-success">{status}</div>
-              <div class="badge badge-warning">{status}</div>
+              <TagsBadge tags={tags} />
+              <Status status={status} />
             </div>
           </div>
         </div>
