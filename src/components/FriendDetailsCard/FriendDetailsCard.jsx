@@ -54,7 +54,7 @@ const FriendDetailsCard = () => {
               <Status status={status} />
 
               <span>"{bio}"</span>
-              <span>{email}</span>
+              <span>Preffered: {email}</span>
             </div>
           </div>
         </div>
